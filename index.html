@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <div class="scoreboard">
+        <h1><i class="fa-solid fa-icons"></i>Emoji Game</h1>
+        <h2 id="show-score">Score: <span id="score">0</span></h2>
+    </div>
+    <div class="game-container" id="gameContainer">
+    </div>
+    <div id="gameMessage" class="message"></div>
+    <button onclick="resetGame()" class="reset-btn">Restart Game</button>
+
+    <!-- Modal Structure -->
+    <div id="loseModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>You Lose! 😢</h2>
+            <p>Your Score: <span id="finalScore"></span></p>
+            <img src="https://www.pngplay.com/wp-content/uploads/12/Sad-Emoji-Free-PNG.png" alt="You Lose" class="lose-image" />
+            <button onclick="resetGame()" class="reset-btn modal-reset-btn">Play Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
