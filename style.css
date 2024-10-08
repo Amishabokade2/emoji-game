@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #e0c3fc, #8ec5fc); /* Light purple gradient */
+    margin: 0;
+}
+
+.scoreboard {
+    background-color: #d4a5f4; /* Light purple */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    color: #fff;
+}
+
+.scoreboard h1{
+    margin-left: 20px;
+}.scoreboard i{
+    margin-right: 8px;
+}
+
+.scoreboard h2 {
+    margin-right: 20px;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 80px); /* Grid format */
+    gap: 15px;
+    padding: 20px;
+    background-color: #f3e5f5; /* Very light purple */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.emoji {
+    font-size: 30px;
+    padding: 20px;
+    cursor: pointer;
+    background-color: #caa4e4; /* Soft purple */
+    border: 2px solid #b38fe4; /* Slightly darker purple */
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Tile-like structure */
+}
+
+.emoji:hover {
+    transform: scale(1.1);
+    background-color: #b084d7; /* Change color on hover */
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #4b0082; /* Darker shade of purple */
+}
+
+.reset-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #8e44ad; /* Deep purple */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+    background-color: #6c3483; /* Darker hover effect */
+}
+
+
+/* Existing styles remain unchanged */
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 100; /* Sits above other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #f3e5f5; /* Light purple */
+    padding: 20px;
+    border: 2px solid #b084d7; /* Border with purple color */
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.lose-image {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.modal-reset-btn {
+    margin-top: 10px;
+    background-color: #8e44ad; /* Deep purple */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-reset-btn:hover {
+    background-color: #6c3483; /* Darker hover effect */
+}
